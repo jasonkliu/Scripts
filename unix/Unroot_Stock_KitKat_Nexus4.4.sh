@@ -6,7 +6,7 @@ cd "$(dirname "$0")"
 
 clear
 chmod +x adb
-chmod +x fastboot-mac
+chmod +x fastboot
 
 echo "This script will: Unroot your Nexus 4 to Stock 4.4 & Lock your Bootloader	 "
 echo "*************************************************************************  "
@@ -19,13 +19,13 @@ echo "It should look like this: http://goo.gl/IU7bQV"
 echo " "
 read -p "Press enter to lock your bootloader and unroot your Nexus 4"
 
-./fastboot-mac flash bootloader bootloader-mako-makoz20i.img
-./fastboot-mac reboot-bootloader
+./fastboot flash bootloader bootloader-mako-makoz20i.img
+./fastboot reboot-bootloader
 sleep 7
-./fastboot-mac flash radio radio-mako-m9615a-cefwmazm-2.0.1700.84.img
-./fastboot-mac reboot-bootloader
+./fastboot flash radio radio-mako-m9615a-cefwmazm-2.0.1700.84.img
+./fastboot reboot-bootloader
 sleep 7
-./fastboot-mac -w update image-occam-krt16s.zip
+./fastboot -w update image-occam-krt16s.zip
 sleep 7
 
 echo " "
@@ -39,7 +39,7 @@ echo " "
 read -p "Press enter to relock the bootloader."
 
 clear
-./fastboot-mac oem lock
+./fastboot oem lock
 sleep 7
 
 echo " "

@@ -5,7 +5,11 @@
 cd "$(dirname "$0")"
 
 clear
-echo "  This script will: Unlock the Bootloader and Root your Nexus 4!    "
+chmod +x adb
+chmod +x fastboot
+
+echo "  This script will: Unlock the Bootloader and Root your Nexus 4!  "
+echo "****************************************************************  "
 echo " "
 echo "  Required files: recover-clockwork-6.0.1.9-mako.img && "
 echo "                  UPDATE-SuperSU-v1.80.zip "
@@ -17,7 +21,7 @@ echo "Turn your phone off then hold volume down and power at the same time."
 echo "It should look like this: http://goo.gl/IU7bQV"
 echo " "
 read -p "Press enter to unlock your bootloader and root your Nexus 4"
-   ./fastboot-mac oem unlock
+   ./fastboot oem unlock
 
 clear
 echo "You now have an unlocked bootloader!"
@@ -48,7 +52,7 @@ echo "Enter 1 then press enter"
 read cw
 
 if [ $cw = 1 ] ; then
-   ./fastboot-mac flash recovery recovery-clockwork-6.0.1.9-mako.img
+   ./fastboot flash recovery recovery-clockwork-6.0.1.9-mako.img
 fi
 
 echo "Use the volume keys to highlight 'Recovery Mode'."
