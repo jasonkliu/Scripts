@@ -1,0 +1,6 @@
+Plugins from ~/.bash_it/
+
+base.plugin.bash
+battery.plugin.bash
+extract.plugin.bash
+osx.plugin.bash
