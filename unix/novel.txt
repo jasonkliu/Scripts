@@ -1,0 +1,13 @@
+Novel Settings from OSX Terminal
+
+Font: Courier 18pt.
+
+Options:
+Antialias text
+Use bold fonts
+Allow blinking text
+Display ANSI colors
+
+Colors:
+Background: R: 223, G: 219, B: 198
+Text:       R:  77, G:  47, B:  46
