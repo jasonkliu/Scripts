@@ -10,13 +10,34 @@ export PATH=$PATH:~/.gem/ruby/1.8/bin:/opt/nginx/sbin
 # Path to the bash it configuration
 export BASH_IT=$HOME/.bash_it
 
+# Path to the VMD and NAMD applications
+export PATH=$PATH:/Applications/VMD\ 1.9.1.app/Contents/Resources/VMD.app/Contents/MacOS
+export PATH=$PATH:/Applications/NAMD_2.9_MacOSX-x86_64-multicore
+
+# General aliases
+alias l="ls -alF"
+alias sl=ls
+alias ls='ls -G'        # Compact view, show colors
+alias la='ls -AF'       # Compact view, show hidden
+alias ll='ls -al'
+alias l1='ls -1'
+
+# Directory
+alias md='mkdir -p'
+alias rd='rmdir'
+alias h='history | tail'
+
+# Make a directory and cd to it
+function mkcd
+{
+   dir="$*";
+   mkdir -p "$dir" && cd "$dir";
+}
+
 # Lock and Load a custom theme file
 # location /.bash_it/themes/
-# export BASH_IT_THEME='clean'
-# export BASH_IT_THEME='nwinkler'
-# export BASH_IT_THEME='pete'
+# export BASH_IT_THEME='clean'||'nwinkler'||'pete'||'standard'
 export BASH_IT_THEME='cleanpete'
-# export BASH_IT_THEME='standard'
 
 # Your place for hosting Git repos. I use this for private repos.
 export GIT_HOSTING='git@git.domain.com'
