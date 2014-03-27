@@ -21,6 +21,8 @@ alias ls='ls -G'        # Compact view, show colors
 alias la='ls -AF'       # Compact view, show hidden
 alias ll='ls -al'
 alias l1='ls -1'
+# On Crunchbang Linux, emulate the OS X 'open in Finder' option
+# alias open='xdg-open'   
 
 # Directory
 alias md='mkdir -p'
