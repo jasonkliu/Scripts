@@ -6,6 +6,7 @@
 
 # Add rvm gems and nginx to the path
 export PATH=$PATH:~/.gem/ruby/1.8/bin:/opt/nginx/sbin
+export PATH=$PATH:/usr/local/opt/ruby/bin
 
 # Path to the bash it configuration
 export BASH_IT=$HOME/.bash_it
@@ -21,8 +22,18 @@ alias ls='ls -G'        # Compact view, show colors
 alias la='ls -AF'       # Compact view, show hidden
 alias ll='ls -al'
 alias l1='ls -1'
+
 # On Crunchbang Linux, emulate the OS X 'open in Finder' option
 # alias open='xdg-open'   
+# alias ls='ls --color'        # Compact view, show colors
+
+# Large History File Size
+HISTFILESIZE=100000
+
+# Alias valgrind options for fun
+alias vf='valgrind -q --track-origins=yes --leak-check=full \
+                      --show-reachable=yes --db-attach=yes'
+alias valgrind='valgrind -q'
 
 # Directory
 alias md='mkdir -p'
