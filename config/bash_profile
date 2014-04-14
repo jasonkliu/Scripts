@@ -33,6 +33,8 @@ HISTFILESIZE=100000
 # Alias valgrind options for fun
 alias vf='valgrind -q --track-origins=yes --leak-check=full \
                       --show-reachable=yes --db-attach=yes'
+alias vn='valgrind -q --track-origins=yes --leak-check=full \
+                      --db-attach=yes'
 alias valgrind='valgrind -q'
 
 # Directory
@@ -45,6 +47,19 @@ function mkcd
 {
    dir="$*";
    mkdir -p "$dir" && cd "$dir";
+}
+
+# Move a file and cd to newdir
+function mvcd 
+{
+   if [ $# -ne 2 -o -d $2 ]; then
+      mv "$@"       # Move the files to the dir
+      while [ $# -gt 1 ]; do shift; done
+      cd "$1"       # Shift until end, change to dir
+   else
+      echo "mvcd: Last argument should be directory" 1>&2
+      return 1
+   fi
 }
 
 # Lock and Load a custom theme file
