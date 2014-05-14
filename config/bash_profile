@@ -8,6 +8,10 @@
 export PATH=$PATH:~/.gem/ruby/1.8/bin:/opt/nginx/sbin
 export PATH=$PATH:/usr/local/opt/ruby/bin
 
+# Add rbenv to the path
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
 # Path to the bash it configuration
 export BASH_IT=$HOME/.bash_it
 

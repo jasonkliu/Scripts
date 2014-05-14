@@ -6,7 +6,7 @@ if [ 0 -eq 1 ]; then
    sudo apt-get update
 fi
 
-# Check if git, capybara, rspec, and sinatra are installed
+# Check if git is installed; possibly unnecessary?
 git --version >/dev/null 2>&1
 GIT_IS_AVAILABLE=$?           # should be 0 if git is installed
 if [ $GIT_IS_AVAILABLE -ne 0 ]; then 
@@ -16,8 +16,9 @@ if [ $GIT_IS_AVAILABLE -ne 0 ]; then
 fi
 
 # Download the source files from Github
-git clone https://github.com/jasonkliu/Scripts
-cd Scripts/config/
+# We should have already done this already
+# git clone https://github.com/jasonkliu/Scripts
+# cd Scripts/config/
 if [ -a gitignore_global ]; then
    echo "Copying global gitignore"
    cp gitignore_global ~/.gitignore_global
@@ -39,4 +40,4 @@ if [ -a bash_settings.tar.gz ]; then
    source ~/.bash_profile
 fi
 
-
+echo "If the prompt hasn't changed, run this: source ~/.bash_profile"
