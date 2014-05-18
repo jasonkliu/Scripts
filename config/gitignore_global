@@ -1,5 +1,9 @@
 #Global .gitignore file to hide everything
+#git config --global user.name username
+#git config --global user.email email@example.com
+#git config --global color.ui true
 #git config --global core.excludesfile ~/.gitignore_global
+#git config alias.hist "log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"
 
 ############
 # Packages #
