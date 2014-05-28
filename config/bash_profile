@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Symlink Sublime Text to /usr/local/bin
+# ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
 
 # Load RVM, if you are using it
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
@@ -16,9 +18,10 @@ export PATH=/usr/local/bin:$PATH
 # Path to the bash it configuration
 export BASH_IT=$HOME/.bash_it
 
-# Path to the VMD and NAMD applications
+# Path to the VMD and NAMD applications and Android adb
 export PATH=$PATH:/Applications/VMD\ 1.9.1.app/Contents/Resources/VMD.app/Contents/MacOS
 export PATH=$PATH:/Applications/NAMD_2.9_MacOSX-x86_64-multicore
+export PATH=$PATH:/Applications/ADT-Eclipse/sdk/platform-tools/
 
 # General aliases
 alias l="ls -alF"
@@ -99,4 +102,12 @@ export TODO="t"
 source $BASH_IT/bash_it.sh
 
 ### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+export PATH=$PATH:/usr/local/heroku/bin
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
+
+# GO Path  
+# mkdir ~/Github/go
+# go get code.google.com/p/go.tools/cmd/godoc
+# go get code.google.com/p/go.tools/cmd/vet
+export GOPATH=~/Github/go
+export PATH=$PATH:$GOPATH/bin
