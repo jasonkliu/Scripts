@@ -21,7 +21,7 @@ export BASH_IT=$HOME/.bash_it
 # Path to the VMD and NAMD applications and Android adb
 export PATH=$PATH:/Applications/VMD\ 1.9.1.app/Contents/Resources/VMD.app/Contents/MacOS
 export PATH=$PATH:/Applications/NAMD_2.9_MacOSX-x86_64-multicore
-export PATH=$PATH:/Applications/ADT-Eclipse/sdk/platform-tools/
+export PATH=$PATH:/Applications/ADT-Eclipse/sdk/platform-tools
 
 # General aliases
 alias l="ls -alF"
@@ -110,4 +110,5 @@ export PATH=$PATH:/usr/local/opt/go/libexec/bin
 # go get code.google.com/p/go.tools/cmd/godoc
 # go get code.google.com/p/go.tools/cmd/vet
 export GOPATH=~/Github/go
+export GOROOT=`go env GOROOT`
 export PATH=$PATH:$GOPATH/bin
