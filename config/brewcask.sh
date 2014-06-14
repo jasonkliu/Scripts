@@ -11,6 +11,7 @@ brew cask install alfred atom dropbox flux macvim mou
 brew cask install pckeyboardhack skype spotify thunderbird 
 brew cask install transmission virtualbox
 brew cask install android-file-transfer texshop
+brew cask install vagrant heroku-toolbelt
 brew cask alfred link # Add Alfred search
 
 # rbenv install 2.1.2 && rbenv global 2.1.2
