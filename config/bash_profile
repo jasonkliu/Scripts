@@ -4,11 +4,11 @@
 # ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
 
 # Load RVM, if you are using it
-[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
+# [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
 
 # Add rvm gems and nginx to the path
-export PATH=$PATH:~/.gem/ruby/1.8/bin:/opt/nginx/sbin
-export PATH=$PATH:/usr/local/opt/ruby/bin
+# export PATH=$PATH:~/.gem/ruby/1.8/bin:/opt/nginx/sbin
+# export PATH=$PATH:/usr/local/opt/ruby/bin
 
 # Add rbenv to the path, /usr/local/bin for Homebrew files first
 export PATH="$HOME/.rbenv/bin:$PATH"
@@ -30,6 +30,9 @@ alias ls='ls -G'        # Compact view, show colors
 alias la='ls -AF'       # Compact view, show hidden
 alias ll='ls -al'
 alias l1='ls -1'
+alias lt='ls -ltrh | tail'
+alias over80="grep -rInl '.\{80,\}' *"
+alias be='bundle exec'
 
 # On Crunchbang Linux, emulate the OS X 'open in Finder' option
 # alias open='xdg-open'   
@@ -109,6 +112,11 @@ export PATH=$PATH:/usr/local/opt/go/libexec/bin
 # mkdir ~/Github/go
 # go get code.google.com/p/go.tools/cmd/godoc
 # go get code.google.com/p/go.tools/cmd/vet
-export GOPATH=~/Github/go
-export GOROOT=`go env GOROOT`
-export PATH=$PATH:$GOPATH/bin
+# export GOPATH=~/Github/go
+# export GOROOT=`go env GOROOT`
+# export PATH=$PATH:$GOPATH/bin
+
+# To remember
+# localhost:3000 is Rails
+# localhost:4000 is Jekyll
+# localhost:8080 is Jenkins

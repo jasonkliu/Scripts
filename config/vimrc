@@ -12,7 +12,7 @@ set ruler               " show the current row and column
 set hlsearch            " highlight searches
 set incsearch           " do incremental searching
 set showmatch           " jump to matches when entering regexp
-set ignorecase          " ignore case when searching
+set noignorecase        " ignore case when searching
 set smartcase           " no ignorecase if Uppercase char present
 
 set visualbell t_vb=    " turn off error beep/flash
@@ -21,13 +21,13 @@ set novisualbell        " turn off visual bell
 set backspace=indent,eol,start  " make that backspace key work the way it should
 
 syntax on               " turn syntax highlighting on by default
-filetype on             " detect type of file
-filetype indent on      " load indent file for specific file type
+" filetype on             " detect type of file
+" filetype indent on      " load indent file for specific file type
 
 set smartindent
-set tabstop=4
-set shiftwidth=4
-" set expandtab         " tabs to spaces
+set tabstop=2
+set shiftwidth=2
+set expandtab         " tabs to spaces
 
 set t_RV=               " http://bugs.debian.org/608242, http://groups.google.com/group/vim_dev/browse_thread/thread/9770ea844cec3282
 
@@ -36,3 +36,23 @@ set cryptmethod=blowfish
 
 " Disables additional files [swap files, backups], prevents dangerous shell commands, and prevents history
 autocmd BufReadPost * if &key != "" | set noswapfile nowritebackup viminfo= nobackup noshelltemp history=0 secure | endif
+
+execute pathogen#infect()
+
+syntax enable
+" set background=dark
+set background=light
+colorscheme solarized
+
+filetype off
+filetype plugin indent off
+set rtp+=$GOROOT/misc/vim
+filetype plugin indent on
+syntax on
+
+"if has("autocmd")
+  "augroup ruby
+    "au BufReadPre,FileReadPre set kp=ri sw=2 ts=2 expandtab
+  "augroup END
+"endif
+
