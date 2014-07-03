@@ -10,6 +10,9 @@
 # export PATH=$PATH:~/.gem/ruby/1.8/bin:/opt/nginx/sbin
 # export PATH=$PATH:/usr/local/opt/ruby/bin
 
+# 'Default' OSX? Path
+# export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/texbin
+
 # Add rbenv to the path, /usr/local/bin for Homebrew files first
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
@@ -106,12 +109,12 @@ source $BASH_IT/bash_it.sh
 
 ### Added by the Heroku Toolbelt
 export PATH=$PATH:/usr/local/heroku/bin
-export PATH=$PATH:/usr/local/opt/go/libexec/bin
 
 # GO Path  
 # mkdir ~/Github/go
 # go get code.google.com/p/go.tools/cmd/godoc
 # go get code.google.com/p/go.tools/cmd/vet
+# export PATH=$PATH:/usr/local/opt/go/libexec/bin
 # export GOPATH=~/Github/go
 # export GOROOT=`go env GOROOT`
 # export PATH=$PATH:$GOPATH/bin

@@ -37,18 +37,18 @@ set cryptmethod=blowfish
 " Disables additional files [swap files, backups], prevents dangerous shell commands, and prevents history
 autocmd BufReadPost * if &key != "" | set noswapfile nowritebackup viminfo= nobackup noshelltemp history=0 secure | endif
 
-execute pathogen#infect()
+" execute pathogen#infect()
 
 syntax enable
 " set background=dark
-set background=light
-colorscheme solarized
+" set background=light
+" colorscheme solarized
 
-filetype off
-filetype plugin indent off
-set rtp+=$GOROOT/misc/vim
-filetype plugin indent on
-syntax on
+" filetype off
+" filetype plugin indent off
+" set rtp+=$GOROOT/misc/vim
+" filetype plugin indent on
+" syntax on
 
 "if has("autocmd")
   "augroup ruby
