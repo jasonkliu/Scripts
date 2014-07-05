@@ -2,6 +2,8 @@
 
 # Symlink Sublime Text to /usr/local/bin
 # ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
+# Symlink Genymotion Shell to /usr/local/bin
+# ln -s /Applications/Genymotion\ Shell.app/Contents/MacOS/genyshell /usr/local/bin/genyshell
 
 # Load RVM, if you are using it
 # [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
