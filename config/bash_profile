@@ -126,3 +126,17 @@ export PATH=$PATH:/usr/local/heroku/bin
 # localhost:3000 is Rails
 # localhost:4000 is Jekyll
 # localhost:8080 is Jenkins
+
+# HG INSTALLATION http://mercurial.selenic.com/wiki/UnixInstall
+#export PYTHONPATH=${HOME}/lib64/python
+#export PATH=${HOME}/bin:$PATH
+
+# VIM INSTALLATION
+#export VIM_DIR=$HOME/bin/vim
+#export VIMRUNTIME=$VIM_DIR/share/vim/vim74
+#export EDITOR=vim
+#export PATH=$VIM_DIR/bin:$PATH
+#alias vi=vim
+
+# Fix stdin is not a tty
+#[ -z "$PS1" ] && return
