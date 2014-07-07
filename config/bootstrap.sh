@@ -23,6 +23,10 @@ if [ -a gitignore_global ]; then
    echo "Copying global gitignore"
    cp gitignore_global ~/.gitignore_global
 fi
+if [ -a gitconfig ]; then
+   echo "Copying gitconfig"
+   cp gitconfig ~/.gitconfig
+fi
 if [ -a vimrc ]; then
    echo "Copying vimrc"
    cp vimrc ~/.vimrc
@@ -41,3 +45,5 @@ if [ -a bash_settings.tar.gz ]; then
 fi
 
 echo "If the prompt hasn't changed, run this: source ~/.bash_profile"
+echo "Remember to change user name and email in ~/.gitconfig"
+read
