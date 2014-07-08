@@ -12,3 +12,5 @@ Scripts
 `Unroot_Stock_KitKat_Nexus4.4.sh`: Reflash bootloader, radio, return to stock, lock bootloader
 
 `Reflash_Kernel.sh`: List devices, flash boot.img and system.img, optionally erase cache/userdata
+
+`config`: dotfiles, possibly move to different repo?
