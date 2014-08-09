@@ -39,6 +39,7 @@ alias lt='ls -ltrh | tail'
 alias over80="grep -rInl '.\{80,\}' *"
 alias be='bundle exec'
 alias mcm='make clean && make'
+alias grin='grep -riIn'
 
 # On Crunchbang Linux, emulate the OS X 'open in Finder' option
 # alias open='xdg-open'   
