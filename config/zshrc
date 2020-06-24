@@ -1,0 +1,53 @@
+#!/usr/bin/env zsh
+# PROMPT="(%*) [%(?:%{$fg_bold[green]%}%n:%{$fg_bold[red]%}%n)$reset_color]"
+# PROMPT+=' %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)$ '
+# ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}(%{$fg[red]%}"
+
+# General aliases
+alias l="ls -alF"
+alias sl=ls
+alias ls='ls -G'        # Compact view, show colors
+alias la='ls -AF'       # Compact view, show hidden
+alias ll='ls -al'
+alias l1='ls -1'
+alias lt='ls -ltrh | tail'
+alias over80="grep -rInl '.\{80,\}' *"
+alias be='bundle exec'
+alias mcm='make clean && make'
+alias grin='grep -riIn'
+
+# alias ls='ls --color'        # Compact view, show colors
+# Large History File Size
+HISTFILESIZE=100000
+
+# Directory
+alias md='mkdir -p'
+alias rd='rmdir'
+alias h='history | tail'
+
+# Make a directory and cd to it
+function mkcd
+{
+   dir="$*";
+   mkdir -p "$dir" && cd "$dir";
+}
+
+# Move a file and cd to newdir
+function mvcd 
+{
+   if [ $# -ne 2 -o -d $2 ]; then
+      mv "$@"       # Move the files to the dir
+      while [ $# -gt 1 ]; do shift; done
+      cd "$1"       # Shift until end, change to dir
+   else
+      echo "mvcd: Last argument should be directory" 1>&2
+      return 1
+   fi
+}
+
+# Set my editor and git editor
+export EDITOR="/usr/local/bin/vim"
+export GIT_EDITOR='/usr/local/bin/vim'
+
+# Don't check mail when opening terminal.
+unset MAILCHECK
