@@ -13,4 +13,4 @@ Scripts
 
 `Reflash_Kernel.sh`: List devices, flash boot.img and system.img, optionally erase cache/userdata
 
-`config`: dotfiles, possibly move to different repo?
+`config`: dotfiles, gitconfig/gitignore/vimrc/zshrc
