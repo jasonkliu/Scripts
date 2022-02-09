@@ -141,3 +141,9 @@ export PATH=$PATH:/usr/local/heroku/bin
 
 # Fix stdin is not a tty
 #[ -z "$PS1" ] && return
+
+# Hide zsh warning on new macOS
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
+# New Homebrew command
+eval "$(/opt/homebrew/bin/brew shellenv)"
