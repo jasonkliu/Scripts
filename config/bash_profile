@@ -17,7 +17,7 @@
 
 # Add rbenv to the path, /usr/local/bin for Homebrew files first
 export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
 export PATH=/usr/local/bin:$PATH
 
 # Path to the bash it configuration
@@ -147,3 +147,6 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 
 # New Homebrew command
 eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Load AWS configs
+export AWS_SDK_LOAD_CONFIG=1
