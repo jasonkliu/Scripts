@@ -80,6 +80,14 @@ function mvcd
    fi
 }
 
+# Convert all .HEIC to .jpg, then remove EXIF data
+function heic2jpg
+{
+    for i in *.HEIC; do echo $i; mogrify -format jpg $i; done
+    for i in *.jpg; do echo $i; convert $i -strip ${i%.*}_strip.jpg; done
+    identify -format '%[EXIF:*]' *_strip.jpg
+}
+
 # Lock and Load a custom theme file
 # location /.bash_it/themes/
 # export BASH_IT_THEME='clean'||'nwinkler'||'pete'||'standard'
@@ -89,8 +97,8 @@ export BASH_IT_THEME='cleanpete'
 export GIT_HOSTING='git@git.domain.com'
 
 # Set my editor and git editor
-export EDITOR="/usr/local/bin/vim"
-export GIT_EDITOR='/usr/local/bin/vim'
+export EDITOR="/usr/bin/vim"
+export GIT_EDITOR='/usr/bin/vim'
 
 # Set the path nginx
 export NGINX_PATH='/opt/nginx'
@@ -154,3 +162,6 @@ export AWS_SDK_LOAD_CONFIG=1
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"
+. "$HOME/.cargo/env"
