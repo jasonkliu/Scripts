@@ -48,3 +48,13 @@ fi
 echo "If the prompt hasn't changed, run this: source ~/.bash_profile"
 echo "Remember to change user name and email in ~/.gitconfig"
 read
+
+# GNU bash, version 5.2.37(1)-release (aarch64-apple-darwin24.2.0)
+# Edit .bash_it/lib/helpers.bash and remove the following lines (4-7)
+# Otherwise, this error will be present:
+# -bash: continue: only meaningful in a `for', `while', or `until' loop
+
+#   if [ ! -d "${BASH_IT}/${subdirectory}/enabled" ]
+#     then
+#       continue
+#   fi
